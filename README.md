@@ -4,7 +4,6 @@ Link to [website](https://bach-tran.vercel.app/)
 
 <img width="1728" alt="Screenshot 2024-02-21 at 3 49 10 AM" src="https://github.com/trangiabach/bach-tran/assets/62537937/f139f828-5dc8-43aa-a2d1-d6d121fe7f17">
 
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
