@@ -21,6 +21,7 @@ import { GrGraphQl } from 'react-icons/gr';
 import { DiRedis } from 'react-icons/di';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { FaPhp } from 'react-icons/fa';
+import { FaJava } from 'react-icons/fa';
 
 export const techIconMap: Record<string, IconType> = {
   'Next.js': SiNextdotjs,
@@ -48,6 +49,7 @@ export const techIconMap: Record<string, IconType> = {
   Redis: DiRedis,
   JavaScript: IoLogoJavascript,
   PHP: FaPhp,
+  Java: FaJava,
 };
 
 export const projects: ProjectCardProps[] = [
@@ -159,8 +161,8 @@ export const projects: ProjectCardProps[] = [
   },
   {
     title:
-      'Anti-Violence Partnership of Philadelphia (AVP) (AVP) Referrals Tracking System',
-    subTitle: 'A dashboard for AVP to manage their referrals more effieciently',
+      'Anti-Violence Partnership of Philadelphia (AVP) Referrals Tracking System',
+    subTitle: 'A dashboard for AVP to manage their referrals more efficiently',
     description:
       'AVP, a victim service agency based in West Philadelphia, was seeking a solution to simplify their referrals tracking system that was spreadout over multiple Google Sheets and Forms. As part of Hack4Impact, I was leading a team to build out a solution to simplify the referrals system into 1 unified platform. Here, I built some of the dashboard UI components and APIs for tracking referrals updates. I also spent a lot of time talking with our clients at AVP and getting to know the nonprofit landscape in Philly!',
     details:
@@ -212,5 +214,21 @@ export const projects: ProjectCardProps[] = [
     graphic:
       'https://storage.googleapis.com/person-website-bach-tran/dp%20graphic%20demo.png',
     app: 'https://apps.apple.com/sg/app/dp/id1550818171',
+  },
+  {
+    title: 'Penn Courses Graph',
+    subTitle:
+      'A graph of all Penn Courses, connected via prereqs and vector similarity',
+    description:
+      'This project is a visualization of the Penn Courses Directory, connected by their relationship in whether they are prereqs to each other or whether their content is similar. The relationships are then processe into a graph-like format and visualized via a web UI with filter options, entirely with vis-react.',
+    details:
+      'This project uses React as the frontend and is hosted on Vercel. The data generated uses a custom vector model in Java that was build as part of NETS1500: Networked and Social Systems to compare vector similary among course description. The scraper to scrape the course directory is also built in Java with Jsoup. The graph UI was built with vis-react',
+    technologies: ['React', 'JavaScript', 'Java'],
+    website: 'https://penn-course-graph.vercel.app/',
+    graphic:
+      'https://storage.googleapis.com/person-website-bach-tran/penn-course-graph-graphic.png',
+    github: 'https://github.com/trangiabach/Penn-Course-Graph',
+    videoDemo:
+      'https://drive.google.com/file/d/1x04-kCscRWlvGLDrMBN7YAB4GmFYNyxa/view',
   },
 ];

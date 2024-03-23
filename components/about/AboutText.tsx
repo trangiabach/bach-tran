@@ -19,7 +19,13 @@ export const AboutText = () => {
         <LinkText href='https://shop.getbezel.com/'>Bezel</LinkText> and{' '}
         <LinkText href='https://www.homebase.com.vn/'>Homebase</LinkText>, where
         I delved into UI infrastructure, API development, caching, testing, SEO
-        and data tooling.
+        and data tooling. Really enjoyed the work and learned a lot on what is
+        like to ship full-stack high-quality software with speed. More
+        informaton on what work/impact has been made can be viewed in{' '}
+        <LinkText href='https://drive.google.com/file/d/1G40lWBMxALfVuirb4SKdGPI6RlABYNhp/view?usp=sharing'>
+          my resume
+        </LinkText>
+        .
       </div>
       <div>
         At school, I help teach{' '}
@@ -51,7 +57,10 @@ export const AboutText = () => {
       </div>
       <div className='pt-3' />
       <div className='flex flex-wrap gap-3'>
-        <Link href='https://drive.google.com/file/d/1G40lWBMxALfVuirb4SKdGPI6RlABYNhp/view?usp=sharing' target='_blank'>
+        <Link
+          href='https://drive.google.com/file/d/1G40lWBMxALfVuirb4SKdGPI6RlABYNhp/view?usp=sharing'
+          target='_blank'
+        >
           <Button variant='outline' className='flex w-fit gap-x-1'>
             <Book size={16} /> Resume
           </Button>

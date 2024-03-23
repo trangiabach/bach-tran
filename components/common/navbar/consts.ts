@@ -16,13 +16,13 @@ export const projectSection: SwitcherOptionProps = {
 };
 
 export const resumeSection: SwitcherOptionProps = {
-    title: '📔 Resume',
-    href: '#resume',
-}
+  title: '📔 Resume',
+  href: '#resume',
+};
 
 export const switcherOptions: SwitcherOptionProps[] = [
   homeOption,
   aboutSection,
   projectSection,
-  resumeSection
+  resumeSection,
 ];
