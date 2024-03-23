@@ -28,7 +28,7 @@ export const ResumeSection = () => {
     <div className='flex flex-col items-center gap-y-8' ref={ref} id={resumeId}>
       <div className='text-2xl md:text-[40px]'>Download resume 📔</div>
       <Link
-        href='https://drive.google.com/file/d/1G40lWBMxALfVuirb4SKdGPI6RlABYNhp/view?usp=sharing'
+        href='https://drive.google.com/file/d/1VBhXF9Pf7u-0Q_AwgKuxF0rtrW-k25KF/view?usp=sharing'
         target='_blank'
       >
         <Button variant='outline' className='flex w-fit gap-x-1'>

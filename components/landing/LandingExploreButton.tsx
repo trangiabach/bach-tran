@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils';
 import { Sparkle } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FadeIn } from '../common/animations/FadeIn';
 import { aboutSection } from '../common/navbar/consts';
@@ -11,13 +10,23 @@ import { Button } from '../ui/button';
 
 export const LandingExploreButton = () => {
   const { setCurrentSectionName } = useNavbar();
-  const router = useRouter();
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const onExploreClick = () => {
     setCurrentSectionName(aboutSection.title.toLowerCase());
-    router.push(`/${aboutSection.href}`);
+
+    if (aboutSection.href) {
+      const section = document.getElementById(
+        aboutSection.href?.replace('#', '')
+      );
+
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop,
+        });
+      }
+    }
   };
 
   const onMouseEnter = () => {
