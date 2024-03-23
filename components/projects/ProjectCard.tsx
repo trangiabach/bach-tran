@@ -56,6 +56,18 @@ export interface ProjectCardProps {
   ref?: Ref<HTMLDivElement>;
 }
 
+export const getProjectCardId = (title: ReactNode) => {
+  if (typeof title !== 'string') {
+    return '';
+  }
+
+  return title
+    .trim()
+    .replaceAll(' ', '-')
+    .replace(/[^a-zA-Z0-9]/g, '')
+    .toLowerCase();
+};
+
 export const ProjectCard: FC<ProjectCardProps> = ({
   title,
   subTitle,
@@ -81,21 +93,27 @@ export const ProjectCard: FC<ProjectCardProps> = ({
   const onMouseLeaveGraphic = () => setIsGraphicHovered(false);
 
   return (
-    <Card {...rest}>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{subTitle}</CardDescription>
+    <Card {...rest} id={getProjectCardId(title)}>
+      <CardHeader className='px-3 md:px-6'>
+        <CardTitle className='text-xl md:text-2xl'>{title}</CardTitle>
+        <CardDescription className='text-xs md:text-sm'>
+          {subTitle}
+        </CardDescription>
       </CardHeader>
-      <CardContent className='md:text-md flex flex-col-reverse items-center gap-4 text-sm md:flex-row md:gap-8'>
+      <CardContent className='md:text-md flex flex-col-reverse items-center gap-4 px-3 text-sm md:flex-row md:gap-8 md:px-6'>
         <div className='flex w-full flex-col' ref={ref}>
-          <div className='text-md'>{description}</div>
+          <div className='md:text-md text-sm'>{description}</div>
           <div className='py-2' />
           <div className='flex flex-wrap gap-2'>
             {technologies.map((tech) => {
               const TechIcon = techIconMap[tech];
 
               return (
-                <Badge key={tech} className='gap-x-1' variant='outline'>
+                <Badge
+                  key={tech}
+                  className='gap-x-1 px-1.5 py-0 text-[0.6rem] md:px-2.5 md:py-0.5 md:text-[0.75rem]'
+                  variant='outline'
+                >
                   {TechIcon && <TechIcon />}
                   {tech}
                 </Badge>
@@ -104,8 +122,12 @@ export const ProjectCard: FC<ProjectCardProps> = ({
           </div>
           <Accordion type='single' collapsible>
             <AccordionItem value='item-1'>
-              <AccordionTrigger>⚙️ More details</AccordionTrigger>
-              <AccordionContent>{details}</AccordionContent>
+              <AccordionTrigger className='md:text-md text-sm'>
+                ⚙️ More details
+              </AccordionTrigger>
+              <AccordionContent className='md:text-md text-sm'>
+                {details}
+              </AccordionContent>
             </AccordionItem>
           </Accordion>
           <div className='py-2' />

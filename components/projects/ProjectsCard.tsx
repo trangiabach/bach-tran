@@ -9,6 +9,7 @@ import {
 } from '../ui/card';
 import { projects } from './consts';
 import { ProjectCard } from './ProjectCard';
+import { ProjectSearch } from './ProjectSearch';
 
 export const ProjectsCard = () => {
   return (
@@ -18,6 +19,7 @@ export const ProjectsCard = () => {
         <CardDescription>Some of the things I have built!</CardDescription>
       </CardHeader>
       <CardContent className='grid grid-cols-1 gap-4 p-2 md:p-6'>
+        <ProjectSearch />
         {projects.map((project, index) => (
           <ProjectCard key={`${project.title}-${index}`} {...project} />
         ))}

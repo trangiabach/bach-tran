@@ -56,7 +56,7 @@ export const projects: ProjectCardProps[] = [
   {
     title: 'Penn Courses LLM',
     subTitle:
-      'An LLM to help student search and plan their courses easier. 1,500 queries processed',
+      'An LLM to help student search and plan their courses easier. 1,700+ queries processed',
     description:
       'At Penn, we have a big course directory that is sometimes hard to search through, especially given the complex nature of planning courses for the semester. Penn Courses LLM seeks to simplify this complexity by offering a chat interface to answer any course-related questions a student might have.',
     technologies: [
@@ -80,7 +80,7 @@ export const projects: ProjectCardProps[] = [
   {
     title: 'Robin AI',
     subTitle:
-      'Healthcare Fraud Detection, powered with AI. 2nd place winner at Penn Generative AI Hackathon',
+      'Healthcare Fraud Detection, powered with AI. 2nd place winner at Penn Generative AI Hackathon. 2024 Venture Lab Startup Challenge Finalist (previously Semifinalist)',
     description:
       'The US experienced $100B annual loss to Medicare and MedicaidFraud. At the same time, the process for detecing such fraud uses either manual or rule-based systems. Robin seeks to introduce ML to healthcare fraud detection, to catch fraud within minutes instead of days. My main role at Robin is to build out our product experience, including the dashboard UI panel and APIs for dataset processing and model inference.',
     technologies: [

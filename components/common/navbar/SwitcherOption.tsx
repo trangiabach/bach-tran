@@ -3,8 +3,9 @@
 import { cn, removeEmoji } from '@/lib/utils';
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useNavbar } from '../../context/NavbarProvider';
+import { useRouter } from 'next/navigation';
 
 export interface SwitcherOptionProps {
   title: string;
@@ -24,6 +25,15 @@ export const SwitcherOption: FC<SwitcherOptionProps> = ({ title, href }) => {
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isSelected) {
+      const id = removeEmoji(title).trim().toLowerCase();
+      router.push(`#${id}`, { scroll: false });
+    }
+  }, [isSelected]);
+
   const onOptionEnter = () => {
     setIsHovered(true);
   };
@@ -40,7 +50,6 @@ export const SwitcherOption: FC<SwitcherOptionProps> = ({ title, href }) => {
     if (section) {
       window.scrollTo({
         top: section.offsetTop,
-        behavior: 'smooth',
       });
     }
   };
